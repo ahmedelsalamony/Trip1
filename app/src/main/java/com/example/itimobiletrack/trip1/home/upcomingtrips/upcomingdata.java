@@ -1,4 +1,4 @@
-package com.example.itimobiletrack.trip1;
+package com.example.itimobiletrack.trip1.home.upcomingtrips;
 
 /**
  * Created by ahmed on 2/14/2017.
@@ -6,14 +6,13 @@ package com.example.itimobiletrack.trip1;
 
 public class upcomingdata {
 
-    private int profileImg,tripImg;
-    private String userName,tripName,tripType;
+    private int tripImg;
+    private String tripName,tripType;
 
 
-    public upcomingdata(int profileImg, int tripImg, String userName, String tripName, String tripType){
-       this.profileImg=profileImg;
+    public upcomingdata( int tripImg, String tripName, String tripType){
+
         this.tripImg=tripImg;
-        this.userName=userName;
         this.tripName=tripName;
         this.tripType=tripType;
 
@@ -28,13 +27,6 @@ public class upcomingdata {
         this.tripType = tripType;
     }
 
-    public int getProfileImg() {
-        return profileImg;
-    }
-
-    public void setProfileImg(int profileImg) {
-        this.profileImg = profileImg;
-    }
 
     public int getTripImg() {
         return tripImg;
@@ -44,13 +36,7 @@ public class upcomingdata {
         this.tripImg = tripImg;
     }
 
-    public String getUserName() {
-        return userName;
-    }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
 
     public String getTripName() {
         return tripName;
