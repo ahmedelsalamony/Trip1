@@ -8,15 +8,15 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.itimobiletrack.trip1.HomeActivity">
+    tools:context="com.example.itimobiletrack.trip1.addnewtrip.AddTrip">
 
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,27 +24,6 @@
             android:orientation="vertical"
             >
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    >
-            <Switch
-                android:id="@+id/switchButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:text="past trip"
-                />
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="upcoming trip"
-    android:layout_marginTop="30dp"
-    android:textColor="#000"
-    />
-
-</LinearLayout>
             <android.support.design.widget.TextInputLayout
                 android:id="@+id/input_layout_tripname"
                 android:layout_width="match_parent"
@@ -54,7 +33,7 @@
                     android:id="@+id/input_tripname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="enter trip name here "
+
 
                     />
 
@@ -69,7 +48,7 @@
                     android:id="@+id/input_startP"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="enter start point here " />
+                     />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -82,7 +61,7 @@
                     android:id="@+id/input_endP"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="enter end point here " />
+                />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -95,7 +74,6 @@
                     android:id="@+id/input_notes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="enter your trip notes here "
                     android:maxLines="5"
                     />
 
@@ -107,31 +85,37 @@
                 android:orientation="horizontal"
                 >
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/btndatedetail"
-                    android:text="date"
-                    android:textAllCaps="false"
-                    android:background="@drawable/button"
-                    android:layout_margin="2dp"
-                    />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:id="@+id/btntimedetail"
-                    android:text="time"
-                    android:textAllCaps="false"
-                    android:background="@drawable/button"
-                    android:layout_margin="2dp"
-                    />
+
+
+
+
+                    <EditText
+                        android:id="@+id/input_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="5"
+                        />
 
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
 
+
+
+                    <EditText
+                        android:id="@+id/input_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="5"
+                        />
+
+               </LinearLayout>
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -141,13 +125,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="One Direction"
-                    android:id="@+id/rdonedirection"
+                    android:id="@+id/onedirection"
                    />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Round Trip"
-                    android:id="@+id/rdround"
+                    android:id="@+id/round"
                    />
             </RadioGroup>
 
@@ -155,36 +139,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 >
-                <Button
-                    android:text="Set Alarm"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/setalarm" />
-
-                <Button
-                    android:text="Cancel Alarm"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button2" /> -->
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/btnmaps"
-                    android:text="map"
-                    android:background="@drawable/button"
-                    android:layout_margin="2dp"
-
-                    />
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/btnsave"
-                    android:text="save"
-                    android:background="@drawable/button"
-                    android:layout_margin="2dp"
-                    />
 
 
             </LinearLayout>

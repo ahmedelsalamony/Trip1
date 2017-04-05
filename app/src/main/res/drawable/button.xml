@@ -3,10 +3,10 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="false">-
         <shape android:shape="rectangle">
-            <corners android:radius="3dp" />
-            <solid android:color="#0186b3"
+            <corners android:radius="40dp" />
+            <solid android:color="#3F51B5"
                 ></solid>
-            <stroke android:width="1dp" android:color="#0186b3"></stroke>
+            <stroke android:width="1dp" android:color="#3F51B5"></stroke>
             <gradient
                 android:centerColor="#fff"
                 android:endColor="#fff"
@@ -15,7 +15,7 @@
     </item>
        <item android:state_pressed="true">-
         <shape android:shape="rectangle">
-            <corners android:radius="6dp" />
+            <corners android:radius="12dp" />
             <gradient android:centerColor="#fff"
                 android:endColor="#fff"
                 android:startColor="#fff" />

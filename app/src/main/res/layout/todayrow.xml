@@ -10,22 +10,23 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
+
 
 
         <RelativeLayout
             android:id="@+id/relative"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            >
 
             <ImageView
                 android:id="@+id/myImageView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/cairoimg"
-                android:adjustViewBounds="true" />
+                android:adjustViewBounds="true"
+                android:src="@drawable/cairoimg" />
 
 
             <LinearLayout
@@ -41,6 +42,7 @@
                 android:orientation="vertical">
 
 
+
                 <TextView
                     android:id="@+id/tripName"
                     android:layout_width="wrap_content"
@@ -49,6 +51,7 @@
                     android:text="ALexandria Trip"
                     android:textColor="#fff"
                     android:textStyle="italic"
+                    android:textSize="20sp"
                     />
 
                 <TextView
@@ -59,25 +62,47 @@
                     android:text="one Direction"
                     android:textColor="#fff"
                     android:textStyle="italic"
-
+                    android:textSize="20sp"
                     />
-
 
             </LinearLayout>
 
 
         </RelativeLayout>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/relative"
-            android:layout_margin="8dp"
-            android:text="more"
-            android:background="@drawable/button"
-            android:textAllCaps="false"
-            android:drawableRight="@drawable/morevector"
-            />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/button"
+                android:text="update"
+                android:textAllCaps="false"
+                android:layout_below="@+id/relative"
+                android:id="@+id/btnupdate"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative"
+                android:layout_margin="4dp"
+                android:background="@drawable/button"
+                android:text="delete"
+                android:textAllCaps="false"
+                android:layout_toRightOf="@+id/btnupdate"
+                android:id="@+id/btndelete"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/button"
+                android:text="more"
+                android:textAllCaps="false"
+                android:layout_toRightOf="@+id/btndelete"
+                android:layout_below="@+id/relative"
+                android:id="@+id/btnmoreinfo"
+                />
+
 
     </RelativeLayout>
 

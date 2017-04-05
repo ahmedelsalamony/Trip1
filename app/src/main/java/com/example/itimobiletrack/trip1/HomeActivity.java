@@ -13,9 +13,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.itimobiletrack.trip1.addnewtrip.AddTrip;
-import com.example.itimobiletrack.trip1.home.pasttrips.PastFragment;
-import com.example.itimobiletrack.trip1.home.todaytrips.TodayFragment;
+//import com.example.itimobiletrack.trip1.addnewtrip.AddTrip;
+
+import com.example.itimobiletrack.trip1.past.pastFragment;
 import com.example.itimobiletrack.trip1.transformation.CircleTransform;
 import com.example.itimobiletrack.trip1.home.upcomingtrips.UpcomingFragment;
 import com.squareup.picasso.Picasso;
@@ -29,6 +29,9 @@ public class HomeActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private Toolbar toolbar;
     ImageView profileImg;
+
+
+    public static boolean reg = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +39,12 @@ public class HomeActivity extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
          setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        ImageView logo=(ImageView)findViewById(R.id.logoimg);
+
+
+        Picasso.with(this).load(R.drawable.logo)
+                .transform(new CircleTransform()).into(logo);
 
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -44,26 +52,24 @@ public class HomeActivity extends AppCompatActivity {
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
-        profileImg=(ImageView)findViewById(R.id.profileImg);
 
-        Picasso.with(this).load(R.drawable.cairoimg)
-                .transform(new CircleTransform()).into(profileImg);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // Click action
-                Intent intent = new Intent(HomeActivity.this, AddTrip.class);
-                startActivity(intent);
-            }
-        });
+
+
     }
+
+    /*this part is used to prevent starting the login activity after your first login*/
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        reg = true;
+    }
+
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new TodayFragment(), "Today");
+
         adapter.addFragment(new UpcomingFragment(), "Upcoming");
-        adapter.addFragment(new PastFragment(), "Past");
+        adapter.addFragment(new pastFragment(), "Past");
         viewPager.setAdapter(adapter);
     }
 
